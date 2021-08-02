@@ -1,0 +1,58 @@
+$colors: (
+  r-blue: #e2ebed,
+  blue: #84aab2,
+  pink: #f6f1ef,
+  box: #f9f8f4,
+  grey: #e6e6e6,
+  white: #ffffff,
+  gold: #9f874e,
+  black: #000000,
+);
+
+@function cl($key) {
+  @return map-get($colors, $key);
+}
+
+html {
+  font-size: 62.5%;
+	letter-spacing: 1.5px;
+}
+
+body {
+  line-height: 1.5;
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  color: cl(p);
+  background-color: cl(r-blue);
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+h2 {
+  font-size: 5vw;
+  @include Montserrat;
+  text-align: center;
+  margin-bottom: 30px;
+  @include mediaTAB {
+    font-size: 3vw;
+  }
+  @include mediaPC {
+    font-size: 4rem;
+  }
+}
+
+.inner {
+	padding: 0 30px;
+	@include mediaTAB {
+		padding: 0 80px;
+	}
+  @include mediaPC {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}

@@ -1,0 +1,73 @@
+.works {
+  .inner {
+    padding: 30px 0;
+    .works-list {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      margin: 30px 10vw;
+      @include mediaTAB {
+        flex-direction: row;
+      }
+      @include mediaPC {
+        margin: 30px 0;
+      }
+      .works-item {
+				width: 90%;
+        text-align: center;
+        font-size: 3vw;
+        background-color: cl(box);
+        padding: 15px 10px;
+        border-radius: 15px;
+        border: solid 3px cl(pink);
+        margin: 0 auto 30px auto;
+        @include mediaTAB {
+          font-size: 1.5vw;
+          width: 30%;
+          height: auto;
+          margin-right: 20px;
+        }
+        @include mediaPC {
+          font-size: 2rem;
+        }
+        &:nth-child(3) {
+          @include mediaTAB {
+            margin-right: 0;
+          }
+        }
+				.caption {
+					display: flex;
+					flex-direction: column;
+					h3 {
+						font-weight: bold;
+					}
+					.description {
+						flex-grow: 1;
+					}
+					.feature {
+						margin-top: auto;
+					}
+				}
+        .works-img {
+          width: auto;
+          position: relative;
+          transition: 1s ease;
+          &:hover {
+            opacity: 0.5;
+            transition: 1s ease;
+          }
+          img {
+            width: 100%;
+            height: 50vw;
+            @include mediaTAB {
+              height: 20vw;
+            }
+            @include mediaPC {
+              height: 300px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

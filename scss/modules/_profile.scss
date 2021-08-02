@@ -1,0 +1,79 @@
+.profile {
+  .inner {
+    .author {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      margin-bottom: 30px;
+      @include mediaTAB {
+        flex-direction: row;
+      }
+      .author-content {
+        margin: 30px 0;
+				width: 100%;
+				text-align: center;
+        p {
+          font-size: 3vw;
+          text-align: center;
+          @include mediaTAB {
+            font-size: 2vw;
+          }
+          @include mediaPC {
+            font-size: 2rem;
+          }
+        }
+				@include mediaTAB {
+					margin: 30px 0;
+					width: 60%;
+					text-align: center;
+				}
+				.author-img {
+					width: 60%;
+					border-radius: 10%;
+					@include mediaTAB {
+						width: 50%;
+					}
+				}
+      }
+      .career {
+        font-size: 3vw;
+        line-height: 2;
+        padding: 30px 20px;
+        font-style: italic;
+        background-color: cl(box);
+        border-radius: 10px;
+        border: solid 3px cl(pink);
+        text-align: center;
+        @include mediaTAB {
+          font-size: 2vw;
+          padding: 30px 20px;
+          text-align: start;
+					width: 50%;
+					height: 100%;
+					margin: auto 0;
+        }
+        @include mediaPC {
+          font-size: 2rem;
+        }
+      }
+    }
+    .comment {
+      font-size: 3vw;
+      text-align: center;
+      line-height: 2;
+      background-color: cl(box);
+      border-radius: 10px;
+      padding: 30px 20px;
+      border: solid 3px cl(pink);
+      @include mediaTAB {
+        font-size: 2vw;
+      }
+      @include mediaPC {
+        font-size: 2rem;
+      }
+      span {
+        color: cl(gold);
+      }
+    }
+  }
+}

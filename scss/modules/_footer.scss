@@ -1,0 +1,10 @@
+footer {
+  .copyright {
+    text-align: center;
+    padding: 15px 0;
+    font-size: 1vw;
+    @include mediaPC {
+      font-size: 2rem;
+    }
+  }
+}

@@ -1,0 +1,44 @@
+.skill {
+  .inner {
+    margin: 0 auto;
+    .skill-list {
+      width: 80%;
+      margin: 0 auto 40px auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      .skill-item {
+        width: 40%;
+        height: auto;
+        background-color: cl(white);
+        border: solid 2px cl(pink);
+        margin: 30px 10px;
+        text-align: center;
+        border-radius: 15px;
+        @include mediaTAB {
+          width: 20%;
+          height: auto;
+        }
+        img {
+          width: 100%;
+          height: 100%;
+          border-radius: 15px;
+          transition: 1s ease;
+          cursor: pointer;
+          &:hover {
+            transform: scale(1.3);
+          }
+        }
+        span {
+          font-size: 3vw;
+          @include mediaTAB {
+            font-size: 1.5vw;
+          }
+          @include mediaPC {
+            font-size: 1.5rem;
+          }
+        }
+      }
+    }
+  }
+}

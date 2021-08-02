@@ -1,0 +1,72 @@
+.service {
+  .inner {
+    .service-list {
+      @include mediaTAB {
+				display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+      }
+      @include mediaPC {
+        margin: 30px 0;
+      }
+      .service-item {
+        background-color: cl(box);
+        border: solid 3px cl(pink);
+				margin-bottom: 30px;
+        border-radius: 15px;
+        padding: 0 30px;
+        &:nth-child(3) {
+          @include mediaTAB {
+            margin-right: 0;
+          }
+        }
+        @include mediaTAB {
+          width: 40%;
+          padding: 15px 10px;
+        }
+        .service-img {
+          text-align: center;
+          img {
+            width: 50%;
+          }
+        }
+        .service-title {
+          font-size: 4vw;
+          @include Montserrat;
+          margin: 15px 15px;
+          text-align: center;
+          @include mediaTAB {
+            font-size: 2.5vw;
+          }
+          @include mediaPC {
+            font-size: 3rem;
+          }
+        }
+        .service-content {
+          font-size: 3vw;
+          @include mediaTAB {
+            font-size: 1.5vw;
+						text-align: justify;
+						p {
+							flex-grow: 1;
+						}
+          }
+          @include mediaPC {
+            font-size: 2rem;
+          }
+          .price {
+            text-align: center;
+						margin: 30px 0;
+          }
+        }
+      }
+    }
+    .caution {
+      text-align: center;
+      font-size: 3vw;
+      @include mediaTAB {
+        font-size: 2rem;
+      }
+    }
+  }
+}

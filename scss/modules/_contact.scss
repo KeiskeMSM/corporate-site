@@ -1,0 +1,33 @@
+.contact {
+  .inner {
+    padding: 30px 0;
+    p {
+      text-align: center;
+      font-size: 3vw;
+      @include mediaTAB {
+        font-size: 2rem;
+      }
+    }
+    .sns {
+      display: flex;
+      justify-content: center;
+      margin: 30px 10vw;
+      li {
+        width: 10%;
+        margin-right: 30px;
+        &:nth-child(3) {
+          margin-right: 0;
+        }
+        @include mediaTAB {
+          width: 5%;
+        }
+        img {
+          width: 100%;
+          &:hover {
+            opacity: 0.5;
+          }
+        }
+      }
+    }
+  }
+}
