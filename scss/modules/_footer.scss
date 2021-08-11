@@ -2,8 +2,8 @@ footer {
   .copyright {
     text-align: center;
     padding: 15px 0;
-    font-size: 1vw;
-    @include mediaPC {
+    font-size: 3vw;
+    @include mediaTAB {
       font-size: 2rem;
     }
   }

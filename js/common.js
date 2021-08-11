@@ -1,4 +1,3 @@
-// 特定の位置までスクロール
 $(function () {
 	// ハンバーガーメニュー
 	$(function () {
@@ -38,6 +37,26 @@ $(function () {
 		$("html,body").animate({ scrollTop: $('.contact').offset().top }, speed, 'swing');
 	});
 	
+	//box1の指定
+	$('.skill-list').on('inview', function(event, isInView) {
+		if (isInView) {
+			//要素が見えたときに実行する処理
+			$(".count-up").each(function(){
+				$(this).prop('Counter',0).animate({//0からカウントアップ
+							Counter: $(this).text()
+					}, {
+					// スピードやアニメーションの設定
+							duration: 2000,//数字が大きいほど変化のスピードが遅くなる。2000=2秒
+							easing: 'swing',//動きの種類。他にもlinearなど設定可能
+							step: function (now) {
+									$(this).text(Math.ceil(now));
+							}
+					});
+			});
+		}
+	});
+	
+	// フェードイン
 	ScrollReveal().reveal('section',{
     duration: 1200,
     viewFactor: 0.5,
